@@ -1,0 +1,107 @@
+{
+	"name": "Cute Kaizo World",
+	"autostart": {
+		"active": "1",
+		"address": "0x100",
+		"value": "0x08",
+		"type": "eq",
+		"next": [
+			{
+				"address": "0x0100",
+				"value": "0x0a",
+				"type": "gt"
+			}
+		]
+	},
+	"definitions": [
+		{
+			"name": "Normal Exit",
+			"address": "0x1B99",
+			"value": "0x01",
+			"type": "eq",
+			"next": [
+				{
+					"address": "0x1B99",
+					"value": "0x00",
+					"type": "eq"
+				}
+			]
+		},
+		{
+			"name": "Key Exit",
+			"address": "0x1434",
+			"value": "0x00",
+			"type": "gt",
+			"next": [
+				{
+					"address": "0x1434",
+					"value": "0x00",
+					"type": "eq"
+				},
+				{
+					"address": "0x100",
+					"value": "0x0C",
+					"type": "eq"
+				}
+			]
+		},
+        {
+			"name": "Reznors Whistle",
+			"address": "0x13C6",
+			"value": "0xFF",
+			"type": "eq"
+		},
+		{
+			"name": "Blue Switch Palace",
+			"address": "0x1F27",
+			"value": "0x01",
+			"type": "eq",
+			"next": [
+				{
+					"address": "0x100",
+					"value": "0x0C",
+					"type": "eq"
+				}
+			]
+		},
+		{
+			"name": "Pink Switch Palace",
+			"address": "0x1F29",
+			"value": "0x01",
+			"type": "eq",
+			"next": [
+				{
+					"address": "0x100",
+					"value": "0x0C",
+					"type": "eq"
+				}
+			]
+		}
+	],
+    "alias": {
+        "Canterbury Woods": "Normal Exit",
+        "Brattleboro": "Normal Exit",
+        "Kimball (S)": "Key Exit",
+        "(S) Kimball": "Key Exit",
+        "Pink Switch": "Pink Switch Palace",
+        "Red Switch": "Pink Switch Palace",
+        "Pink Switch Palace": "Pink Switch Palace",
+        "Red Switch Palace": "Pink Switch Palace",
+        "Kimball (S)": "Normal Exit",
+        "(R) Kimball": "Normal Exit",
+        "Stonebridge": "Normal Exit",
+        "Intervale": "Normal Exit",
+        "Windsor": "Normal Exit",
+        "Oak Hill": "Normal Exit",
+        "Pat's Peak (S)": "Key Exit",
+        "(S) Pat's Peak": "Key Exit",
+        "Turquoise Switch": "Blue Switch Palace",
+        "Turquoise Switch Palace": "Blue Switch Palace",
+        "Blue Switch": "Blue Switch Palace",
+        "Blue Switch Palace": "Blue Switch Palace",
+        "Pat's Peak (R)": "Normal Exit",
+        "(R) Pat's Peak": "Normal Exit",
+        "Blossom Hill": "Normal Exit",
+        "Zalzion Castle": "Reznors Whistle"
+    }
+}
