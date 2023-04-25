@@ -1,0 +1,76 @@
+{
+  "name": "Ambivalence",
+  "autostart": {
+		"active": "1",
+		"address": "0x100",
+		"value": "0x08",
+		"type": "eq",
+		"next": [
+			{
+				"address": "0x0100",
+				"value": "0x0a",
+				"type": "gt"
+			}
+		]
+	},
+  "definitions": [
+    {
+		"name": "Normal Exit",
+		"address": "0x1B99",
+		"value": "0x01",
+		"type": "eq",
+		"next": [
+			{
+				"address": "0x1B99",
+				"value": "0x00",
+				"type": "eq"
+			}
+		]
+	},
+    {
+        "name": "ORB Exit",
+        "address": "0x1DFB",
+        "value": "0x20",
+        "type": "gt",
+		"next": [
+			{
+				"address": "0x1DFB",
+				"value": "0x00",
+				"type": "eq"
+			},
+			{
+				"address": "0x100",
+				"value": "0x0C",
+				"type": "eq"
+			}
+		]
+    },
+	{
+      "name": "Level Entry",
+      "address": "0x100",
+      "value": "0x0E",
+      "type": "eq",
+		"next": [
+			{
+				"address": "0x100",
+				"value": "0x0F",
+				"type": "eq"
+			}
+		]
+    }
+    ],
+    "alias": {
+        "Prickly Forest": "Normal Exit",
+        "Dinos at Dusk": "Normal Exit",
+        "Peachy Peak": "Normal Exit",
+        "Mole Pipeline": "Normal Exit",
+        "Grape Castle": "ORB Exit",
+        "P In The Air": "Normal Exit",
+        "Bustin' Woods": "Normal Exit",
+        "Spooky Helper": "Normal Exit",
+        "Castle Supreme": "ORB Exit",
+        "Fuzzycoaster": "Normal Exit",
+        "The Grey": "Normal Exit",
+        "Credits": "Level Entry"
+    }
+}
