@@ -8,11 +8,11 @@
     "next": [
         {
             "address": "0x0100",
-            "value": "0x0a",
+            "value": "0x0A",
             "type": "gt"
         }
     ]
-},
+  },
   "definitions": [
     {
       "name": "Normal Exit",
@@ -26,75 +26,87 @@
               "type": "eq"
           }
       ]
-},
+    },
     {
         "name": "Key Exit",
         "address": "0x1434",
-        "value": "0x0030",
-        "type": "eq"
+        "value": "0x00",
+        "type": "gt",
+		"next": [
+			{
+				"address": "0x1434",
+				"value": "0x00",
+				"type": "eq"
+			},
+			{
+				"address": "0x100",
+				"value": "0x0C",
+				"type": "eq"
+			}
+		]
+    },
+    {
+        "name": "ORB Exit",
+        "address": "0x1DFB",
+        "value": "0x3C",
+        "type": "gt",
+		"next": [
+			{
+				"address": "0x1DFB",
+				"value": "0x03",
+				"type": "eq"
+			},
+			{
+				"address": "0x100",
+				"value": "0x0C",
+				"type": "eq"
+			}
+		]
     },
     {
         "name": "Boss Exit",
         "address": "0x13C6",
-        "value": "0xFF",
-        "type": "eq"
+        "value": "0x00",
+        "type": "gt",
+		"next": [
+			{
+				"address": "0x13C6",
+				"value": "0x00",
+				"type": "eq"
+			}
+		]
     },
     {
         "name": "Final Boss Exit",
         "address": "0x13C6",
-        "value": "0x01",
-        "type": "eq"
+        "value": "0x00",
+        "type": "gt"
     },
     {
         "name": "Buttermilk Palace",
-        "address": "0x1f28",
+        "address": "0x1F28",
         "value": "0x01",
-        "type": "eq"
+        "type": "eq",
+		"next": [
+			{
+				"address": "0x100",
+				"value": "0x0C",
+				"type": "eq"
+			}
+		]
     },
     {
         "name": "Vapor Palace",
-        "address": "0x1f29",
+        "address": "0x1F29",
         "value": "0x01",
-        "type": "eq"
-    },
-    {
-        "name": "Soaring Saguaro",
-        "address": "0x1DFB",
-        "value": "0x44",
         "type": "eq",
-        "next": [
-             {
-                "address": "0x1DFB",
-                "value": "0x03",
-                "type": "eq"
-             }
-            ]
-    },
-    {
-        "name": "RB's Clock Tower",
-        "address": "0x1DFB",
-        "value": "0x43",
-        "type": "eq",
-        "next": [
-             {
-                "address": "0x1DFB",
-                "value": "0x03",
-                "type": "eq"
-             }
-            ]
-    },
-    {
-        "name": "Chris G Spot",
-        "address": "0x1DFB",
-        "value": "0x3D",
-        "type": "eq",
-        "next": [
-             {
-                "address": "0x1DFB",
-                "value": "0x03",
-                "type": "eq"
-             }
-            ]
+		"next": [
+			{
+				"address": "0x100",
+				"value": "0x0C",
+				"type": "eq"
+			}
+		]
     }
     ],
     "alias": {
@@ -102,18 +114,36 @@
         "The Shen": "Normal Exit",
         "Take Five": "Normal Exit",
         "Field of Dreams": "Normal Exit",
+        "Field of Dreams (R)": "Normal Exit",
+        "(R) Field of Dreams": "Normal Exit",
         "Field of Dreams (S)": "Key Exit",
+        "(S) Field of Dreams": "Key Exit",
+        "Buttermilk Palace": "Buttermilk Palace",
         "Roll the Bones": "Boss Exit",
         "The Batcave": "Normal Exit",
         "To the Limit": "Normal Exit",
         "Jurassic Jungle": "Normal Exit",
+        "Chris G Spot": "ORB Exit",
+        "Chris G Spot (R)": "ORB Exit",
+        "(R) Chris G Spot": "ORB Exit",
         "Chris G Spot (S)": "Key Exit",
+        "(S) Chris G Spot": "Key Exit",
+        "The Chris G Spot": "ORB Exit",
+        "(R) The Chris G Spot": "ORB Exit",
+        "The Chris G Spot (R)": "ORB Exit",
+        "The Chris G Spot (S)": "Key Exit",
+        "(S) The Chris G Spot": "Key Exit",
+        "Vapor Palace": "Vapor Palace",
+        "RB's Clock Tower": "ORB Exit",
+        "Soaring Saguaro": "ORB Exit",
         "Hot Potato": "Normal Exit",
         "Elusive Numbers": "Normal Exit",
         "Pokey Desert": "Normal Exit",
         "Blocks on the Rocks": "Normal Exit",
-        "Yoshi's Lair": "Boss Exit",
+        "Yoshi's Lair": "Final Boss Exit",
         "Yoshi's Lair (Spare)": "Key Exit",
+        "Yoshi's Lair (S)": "Key Exit",
+        "(S) Yoshi's Lair": "Key Exit",
         "Spaceballs": "Normal Exit",
         "Mega Scottage": "Normal Exit",
         "Sawrfing Ruins": "Normal Exit",
