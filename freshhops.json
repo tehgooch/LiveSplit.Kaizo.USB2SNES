@@ -1,55 +1,49 @@
 {
-	"name": "Fresh Hops",
-	"_by": "MorrieTheMagpie",
-	"_credit": "pzyko103, chsbrgr",
-	"autostart": {
-		"active": "1",
-		"address": "0x100",
-		"value": "0x08",
-		"type": "eq",
-		"next": [
-			{
-				"address": "0x0100",
-				"value": "0x0a",
-				"type": "gt"
-			}
-		]
-	},
-	"definitions": [
-		{
-			"name": "Normal Exit",
-			"address": "0x1B99",
-			"value": "0x01",
-			"type": "eq",
-			"next": [
-				{
-					"address": "0x1B99",
-					"value": "0x00",
-					"type": "eq"
-				}
-			]
-		},
-		{
-			"name": "Boss Exit",
-			"address": "0x13C6",
-			"value": "0xFF",
-			"type": "eq"
-		},
-		{
-			"name": "Fanfare",
-			"address": "0x906",
-			"value": "0x00",
-			"type": "eq",
-			"next": [
-				{
-					"address": "0x906",
-					"value": "0x01",
-					"type": "eq"
-				}
-			]
-		},
-		{
-            "name": "Orb Exit",
+    "name": "Fresh Hops",
+    "_by": "MorrieTheMagpie",
+    "_credit": "pzyko103, chsbrgr, tehgoocherer",
+    "autostart": {
+        "active": "1",
+        "address": "0x100",
+        "value": "0x08",
+        "type": "eq",
+        "next": [
+            {
+                "address": "0x0100",
+                "value": "0x0a",
+                "type": "gt"
+            }
+        ]
+    },
+    "definitions": [
+        {
+            "name": "Normal Exit",
+            "address": "0x1B99",
+            "value": "0x01",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x1B99",
+                    "value": "0x00",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "Boss Exit",
+            "address": "0x13C6",
+            "value": "0x00",
+            "type": "gt",
+            "next": [
+                {
+                    "address": "0x13C6",
+                    "value": "0x00",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "ORB Exit",
             "address": "0x1493",
             "value": "0x00",
             "type": "eq",
@@ -59,17 +53,23 @@
                     "value": "0xF0",
                     "type": "gt"
                 }
-            ],
-            "_comment": "Triggers on Orb in Vertical Level"
+            ]
         },
-		{
-			"name": "Key Exit",
-			"address": "0x1434",
-			"value": "0x0030",
-			"type": "eq"
-		}
-	],
-	"alias": {
+        {
+            "name": "Level Entry",
+            "address": "0x100",
+            "value": "0x0E",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x100",
+                    "value": "0x0F",
+                    "type": "eq"
+                }
+            ]
+        }
+    ],
+    "alias": {
 		"Huma Lupa Licious": "Normal Exit",
 		"Bellaire Brown": "Normal Exit",
 		"Falls Tannen": "Normal Exit",
@@ -83,7 +83,8 @@
 		"Rubaeus": "Normal Exit",
 		"Laughing Fish": "Normal Exit",
 		"Borealis Broo": "Normal Exit",
-		"Barbaric Yawp": "Orb Exit",
-		"Widowmaker": "Boss Exit"
-	}
+		"Barbaric Yawp": "ORB Exit",
+		"Widowmaker": "Boss Exit",
+        "Irish Goodbye": "Level Entry"
+    }
 }
