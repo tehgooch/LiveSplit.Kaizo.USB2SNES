@@ -1,0 +1,140 @@
+{
+    "name": "MorrieThon",
+    "_by": "MorrieTheMagpie",
+    "_credit": "tehgoocherer",
+    "autostart": {
+        "active": "1",
+        "address": "0x100",
+        "value": "0x08",
+        "type": "eq",
+        "next": [
+            {
+                "address": "0x0100",
+                "value": "0x0a",
+                "type": "gt"
+            }
+        ]
+    },
+    "definitions": [
+        {
+            "name": "Normal Exit",
+            "address": "0x1B99",
+            "value": "0x01",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x1B99",
+                    "value": "0x00",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "Boss Exit",
+            "address": "0x13C6",
+            "value": "0x00",
+            "type": "gt",
+            "next": [
+                {
+                    "address": "0x13C6",
+                    "value": "0x00",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "Yellow Palace",
+            "address": "0x1F28",
+            "value": "0x01",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x100",
+                    "value": "0x11",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "Escape Pipe",
+            "address": "0x89",
+            "value": "0x03",
+            "type": "eq"
+        },
+        {
+            "name": "Final Boss Whistle",
+            "address": "0x13C6",
+            "value": "0x00",
+            "type": "gt"
+        },
+        {
+            "name": "ORB Exit",
+            "address": "0x1493",
+            "value": "0x00",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x1493",
+                    "value": "0xF0",
+                    "type": "gt"
+                }
+            ]
+        },
+        {
+            "name": "Level Entry",
+            "address": "0x100",
+            "value": "0x0E",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x100",
+                    "value": "0x0F",
+                    "type": "eq"
+                }
+            ]
+        }
+    ],
+    "alias": {
+        "Rickscruff Park": "Normal Exit",
+        "Tehgooch Shores": "Normal Exit",
+        "Shelling Voyage": "Yellow Palace",
+        "Once Eternal Ruins": "Normal Exit",
+        "Desert of Demize": "Normal Exit",
+        "Full Bloom Beetles": "Boss Exit",
+        "Oreos Abodom": "Normal Exit",
+        "Tofugawa Tundra": "Normal Exit",
+        "Barbaroose Woods": "Boss Exit",
+        "Ultra Amethyst Star": "Normal Exit",
+        "Pzyko-Babble": "Normal Exit",
+        "Chi Fortress": "Escape Pipe",
+        "Breakaway": "Normal Exit",
+        "Dune Groove": "Normal Exit",
+        "Technicolor Forest": "Normal Exit",
+        "Moggy Moat": "Normal Exit",
+        "Seeing Double": "Boss Exit",
+        "The Depths": "Normal Exit",
+        "Run Around": "Normal Exit",
+        "Swamp Symphony": "Normal Exit",
+        "Oil Man": "Normal Exit",
+        "Point Break": "Boss Exit",
+        "Cumulus Crossing": "Normal Exit",
+        "Delphinidae": "Normal Exit",
+        "Pick Up The Pieces": "Final Boss Whistle",
+		"Huma Lupa Licious": "Normal Exit",
+		"Bellaire Brown": "Normal Exit",
+		"Falls Tannen": "Normal Exit",
+		"Diabolical": "Boss Exit",
+		"Presque Ale": "Normal Exit",
+		"Serendipity": "Normal Exit",
+		"Low Hanging Fruit": "Normal Exit",
+		"Two Hearted": "Normal Exit",
+		"Two-Hearted": "Normal Exit",
+		"Blooming Desert": "Boss Exit",
+		"Rubaeus": "Normal Exit",
+		"Laughing Fish": "Normal Exit",
+		"Borealis Broo": "Normal Exit",
+		"Barbaric Yawp": "ORB Exit",
+		"Widowmaker": "Boss Exit",
+        "Irish Goodbye": "Level Entry"
+    }
+}
