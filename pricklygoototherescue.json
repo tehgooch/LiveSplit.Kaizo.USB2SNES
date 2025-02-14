@@ -1,0 +1,68 @@
+{
+    "name": "Prickly Goo to the Rescue",
+    "_by": "LashLaRue24",
+    "_credit": "tehgoocherer",
+    "autostart": {
+        "active": "1",
+        "address": "0x100",
+        "value": "0x08",
+        "type": "eq",
+        "next": [
+            {
+                "address": "0x0100",
+                "value": "0x0a",
+                "type": "gt"
+            }
+        ]
+    },
+    "definitions": [
+        {
+            "name": "Normal Exit",
+            "address": "0x1B99",
+            "value": "0x01",
+            "type": "eq",
+            "next": [
+                {
+                    "address": "0x1B99",
+                    "value": "0x00",
+                    "type": "eq"
+                }
+            ]
+        },
+        {
+            "name": "Boss Exit",
+            "address": "0x13C6",
+            "value": "0x00",
+            "type": "gt"
+        },
+        {
+            "name": "Key Exit",
+            "address": "0x1434",
+            "value": "0x00",
+            "type": "gt",
+            "next": [
+                {
+                    "address": "0x1434",
+                    "value": "0x00",
+                    "type": "eq"
+                },
+                {
+                    "address": "0x100",
+                    "value": "0x0C",
+                    "type": "eq"
+                }
+            ]
+        }
+    ],
+    "alias": {
+        "Catnip Plains": "Normal Exit",
+        "Scratching Post": "Normal Exit",
+        "Bird Feeder": "Normal Exit",
+        "Midnight Antics": "Normal Exit",
+        "Filtered Water": "Normal Exit",
+        "Howl 4 No Reason": "Normal Exit",
+        "Under The Fridge": "Key Exit",
+        "Glass Smash Cliff": "Normal Exit",
+        "Vet's Office": "Boss Exit"
+    }
+}
